@@ -33,3 +33,34 @@ fn calculate() -> i32 {
     x + 2       // 表达式, 返回值
 }
 ```
+
+## 3. 函数的返回值
+
+函数的返回值可以是任意类型，甚至可以是另一个函数。
+
+```rust
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn sub(a: i32, b: i32) -> i32 {
+    a - b
+}
+
+fn math(op: &str) -> fn(i32, i32) -> i32 {
+    match op {
+        "add" => add,
+        "sub" => sub,
+        _ => panic!("Unknown operation"),
+    }
+}
+
+fn main() {
+    let a = 10;
+    let b = 5;
+    let op = "add";
+
+    let result = math(op)(a, b);
+    println!("The result is {}", result);
+}
+```
