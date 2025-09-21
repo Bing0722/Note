@@ -17,7 +17,7 @@
   - [段落](#段落)
   - [脚注](#脚注)
   - [警报](#警报)
-<!--toc:end-->
+  <!--toc:end-->
 
 ## 标题
 
@@ -129,6 +129,14 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 
 您可以使用此括号语法为您的内容添加脚注：
 
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+
 ```md
 Here is a simple footnote[^1].
 
@@ -142,6 +150,21 @@ A footnote can also have multiple lines[^2].
 ## 警报
 
 警报是基于块引用语法的 Markdown 扩展，可用于强调关键信息。
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
 
 ```md
 > [!NOTE]
